@@ -9,8 +9,8 @@ app.use(express.json());
 
 app.use("/books", bookRoutes);
 app.use("/borrow", borrowRouter);
-// app.use("/notFound", notFoundRoutes);
-// app.use("/error", errorHandlerRoutes);
+app.use("/notFound", notFoundRoutes);
+app.use("/error", errorHandlerRoutes);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Welcome to the Library LMS');
